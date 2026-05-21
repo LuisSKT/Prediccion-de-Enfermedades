@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="web/estilo.css">
+</head>
+
+<body>
+    <div class="contenedor-login">
+        <form class="tarjeta-login" id="formularioLogin">
+            <h2>CLINICA LUISITO</h2>
+            <div class="grupo-entrada">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" placeholder="Ingresa tu usuario" required>
+            </div>
+            <div class="grupo-entrada">
+                <label for="clave">Contraseña</label>
+                <input type="password" id="clave" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="boton-ingreso">Ingresar</button>
+            <p id="mensaje" class="mensaje-error"></p>
+
+            <!-- Esto va debajo del botón de ingresar -->
+            <div class="pie-formulario">
+                <a href="#" class="enlace-olvido">¿Olvidaste tu contraseña?</a>
+
+                <div class="texto-registro">
+                    ¿No tienes una cuenta?
+                    <a href="registro.html" class="enlace-registro">Regístrate aquí</a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+
+    <script src="/web/logica.js"></script>
+
+
+
+</body>
+
+</html>

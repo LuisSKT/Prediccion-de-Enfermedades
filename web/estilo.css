@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('/img/foto2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    height: 100vh;
+    padding-left: 10%; 
+}
+
+
+.contenedor-login {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+
+.tarjeta-login {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    color: #0d47a1;
+}
+
+
+.grupo-entrada {
+    margin-bottom: 20px;
+}
+
+
+.grupo-entrada label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+}
+
+
+.grupo-entrada input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+
+.grupo-entrada input:focus {
+    border-color: #0d47a1;
+}
+
+
+.boton-ingreso {
+    width: 100%;
+    padding: 12px;
+    background-color: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+.boton-ingreso:hover {
+    background-color: #0a3d8a;
+}
+
+
+.mensaje-error {
+    color: #d32f2f;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    display: none;
+}
+
+/* DE PASSWORD*/
+
+/* Contenedor de los enlaces al final del cuadro */
+.pie-formulario {
+    margin-top: 25px;
+    text-align: center;
+    border-top: 1px solid #eee; 
+    padding-top: 20px;
+}
+
+/* Estilo para "¿Olvidaste tu contraseña?" */
+.enlace-olvido {
+    display: block;
+    margin-bottom: 15px;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.enlace-olvido:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* Estilo para el texto de registro */
+.texto-registro {
+    font-size: 14px;
+    color: #555;
+}
+
+.enlace-registro {
+    color: #0d47a1;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.enlace-registro:hover {
+    color: #0a3d8a;
+    text-decoration: underline;
+}
