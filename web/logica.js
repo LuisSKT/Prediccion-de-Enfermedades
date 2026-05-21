@@ -8,32 +8,29 @@ document.getElementById('formularioLogin').addEventListener('submit', async (e) 
     try {
         const response = await fetch('http://localhost:3000/api/login', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({ usuario, password })
         });
 
         const data = await response.json();
 
         if (data.success) {
-            window.location.href = "dashboard.html";
+            alert(data.mensaje);
+
+    
+            window.location.href = "/web/dashboard.html";
 
         } else {
             mensaje.innerText = data.mensaje;
             mensaje.style.display = 'block';
         }
+
     } catch (error) {
-        console.error("Error de conexión:", error);
-        mensaje.innerText = "Error al conectar con el servidor.";
+        console.error("Error:", error);
+
+        mensaje.innerText = "No se pudo conectar con el servidor";
         mensaje.style.display = 'block';
     }
-
-    if (data.success) {
-        alert(data.mensaje);
-        window.location.href = "dashboard.html";
-    } else {
-        alert("Error en el login");
-    }
-
-
-
 });
