@@ -1,5 +1,5 @@
 document.getElementById('formularioLogin').addEventListener('submit', async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     const usuario = document.getElementById('usuario').value;
     const password = document.getElementById('clave').value;
@@ -15,7 +15,7 @@ document.getElementById('formularioLogin').addEventListener('submit', async (e) 
         const data = await response.json();
 
         if (data.success) {
-            alert(`Bienvenido, rol: ${data.rol}`);
+            window.location.href = "dashboard.html";
 
         } else {
             mensaje.innerText = data.mensaje;
@@ -25,6 +25,13 @@ document.getElementById('formularioLogin').addEventListener('submit', async (e) 
         console.error("Error de conexión:", error);
         mensaje.innerText = "Error al conectar con el servidor.";
         mensaje.style.display = 'block';
+    }
+
+    if (data.success) {
+        alert(data.mensaje);
+        window.location.href = "dashboard.html";
+    } else {
+        alert("Error en el login");
     }
 
 
